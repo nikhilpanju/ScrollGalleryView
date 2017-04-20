@@ -28,7 +28,7 @@ import java.util.List;
  * Created by veinhorn on 6.8.15.
  */
 public class ScrollGalleryView extends LinearLayout {
-    private static final int TAG_KEY = "tag_key";
+    private static final int TAG_KEY = 100;
 
     private FragmentManager fragmentManager;
     private Context context;
