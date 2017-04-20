@@ -28,7 +28,6 @@ import java.util.List;
  * Created by veinhorn on 6.8.15.
  */
 public class ScrollGalleryView extends LinearLayout {
-    private static final int TAG_KEY = 100;
 
     private FragmentManager fragmentManager;
     private Context context;
@@ -58,7 +57,7 @@ public class ScrollGalleryView extends LinearLayout {
         @Override
         public void onClick(View v) {
             scroll(v);
-            viewPager.setCurrentItem((int) v.getTag(TAG_KEY), true);
+            viewPager.setCurrentItem((int) v.getTag(R.id.tag_key), true);
         }
     };
 
@@ -204,7 +203,7 @@ public class ScrollGalleryView extends LinearLayout {
         ImageView thumbnailView = new ImageView(context);
         thumbnailView.setLayoutParams(lp);
         thumbnailView.setImageBitmap(thumbnail);
-        thumbnailView.setTag(TAG_KEY, mListOfMedia.size() - 1);
+        thumbnailView.setTag(R.id.tag_key, mListOfMedia.size() - 1);
         thumbnailView.setOnClickListener(thumbnailOnClickListener);
         thumbnailView.setScaleType(ImageView.ScaleType.CENTER);
         return thumbnailView;
